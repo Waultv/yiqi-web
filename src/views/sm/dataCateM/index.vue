@@ -1,0 +1,23 @@
+<template>
+  <div>
+    <h1>数据分类管理</h1>
+  </div>
+</template>
+
+<script>
+
+
+  export default {
+    name: 'home',
+    data() {
+      return {}
+    },
+    created(){
+    },
+    methods:{
+    }
+  }
+</script>
+
+<style scoped>
+</style>
