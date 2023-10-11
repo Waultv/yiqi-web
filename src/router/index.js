@@ -61,7 +61,7 @@ export const asyncRouterMap = [
         name: 'dataCateM',
         component: () => import('@/views/sm/dataCateM/index'),
         meta: {title: '数据类别管理', icon: 'product-add'},
-        hidden: true
+        // hidden: true
       },
       {
         path: 'dataEntry',
@@ -85,6 +85,13 @@ export const asyncRouterMap = [
         meta: {title: '超声图像增强', icon: 'product-list'}
       },
       {
+        path: 'ultrasoundEnhance-selectData',
+        name: 'ultrasoundEnhance-selectData',
+        component: () => import('@/views/dp/ultrasoundEnhance/selectData'),
+        meta: {title: '选择数据', icon: 'product-list'},
+        hidden: true
+      },
+      {
         path: 'heartsoundsToMusic',
         name: 'heartsoundsToMusic',
         component: () => import('@/views/dp/heartsoundsToMusic/index'),
@@ -95,7 +102,7 @@ export const asyncRouterMap = [
         name: 'heartsoundsPre',
         component: () => import('@/views/dp/heartsoundsPre/index'),
         meta: {title: '心音预处理', icon: 'product-add'},
-        hidden: true
+        // hidden: true
       },
       {
         path: 'ecgPre',
@@ -148,6 +155,27 @@ export const asyncRouterMap = [
             name: 'iToiFusion',
             component: () => import('@/views/mr/registrationFusionPre/iToiFusion/index'),
             meta: {title: '图像与图像的融合', icon: 'product-add'},
+            // hidden: true
+          },
+          {
+            path: 'iToiFusion/selectP',
+            name: 'selectP',
+            component: () => import('@/views/mr/registrationFusionPre/iToiFusion/selectP'),
+            meta: {title: '图像融合选择病人', icon: 'product-list'},
+            hidden: true
+          },
+          // {
+          //   path: 'iToiFusion/patientsDataEntry',
+          //   name: 'patientsDataEntry',
+          //   component: () => import('@/views/mr/registrationFusionPre/iToiFusion/patientsDataEntry'),
+          //   meta: {title: '图像融合患者数据录入', icon: 'product-list'},
+          //   hidden: true
+          // },
+          {
+            path: 'iToiFusion/selectData',
+            name: 'selectData',
+            component: () => import('@/views/mr/registrationFusionPre/iToiFusion/selectData'),
+            meta: {title: '图像融合选择数据', icon: 'product-list'},
             hidden: true
           },
           {
@@ -185,14 +213,35 @@ export const asyncRouterMap = [
             name: 'baseEcgChdPr',
             component: () => import('@/views/ad/chdAidsPr/baseEcgChdPr/index'),
             meta: {title: '基于心电的先心病预测', icon: 'product-add'},
-            hidden: true
+            // hidden: true
           },
           {
             path: 'multimodalCoPre',
             name: 'multimodalCoPre',
             component: () => import('@/views/ad/chdAidsPr/multimodalCoPre/index'),
             meta: {title: '多模态协同预测', icon: 'product-cate'}
-          }
+          },
+          {
+            path: 'multimodalCoPre_selectP',
+            name: 'multimodalCoPre_selectP',
+            component: () => import('@/views/ad/chdAidsPr/multimodalCoPre/selectP'),
+            meta: {title: '多模态协同预测选择病人', icon: 'product-list'},
+            hidden: true
+          },
+          // {
+          //   path: 'multimodalCoPre_patientsDataEntry',
+          //   name: 'multimodalCoPre_patientsDataEntry',
+          //   component: () => import('@/views/ad/chdAidsPr/multimodalCoPre/patientsDataEntry'),
+          //   meta: {title: '多模态协同预测患者数据录入', icon: 'product-list'},
+          //   hidden: true
+          // },
+          {
+            path: 'multimodalCoPre_selectData',
+            name: 'multimodalCoPre_selectData',
+            component: () => import('@/views/ad/chdAidsPr/multimodalCoPre/selectData'),
+            meta: {title: '多模态协同预测选择数据', icon: 'product-list'},
+            hidden: true
+          },
         ]
       },
       {
@@ -207,27 +256,27 @@ export const asyncRouterMap = [
           component: () => import('@/views/ad/cardiacSegmentation/totalCS/index'),
           meta: {title: '全心脏分割（MR、CT）', icon: 'product-list'},
         },
-        {
-          path: 'ultrasoundSemiSupervisedCS',
-          name: 'ultrasoundSemiSupervisedCS',
-          component: () => import('@/views/ad/cardiacSegmentation/ultrasoundSemiSupervisedCS/index'),
-          meta: {title: '半监督心脏分割（超声）', icon: 'product-add'},
-          hidden: true
-        },
-        {
-          path: 'cardiacSegmentationCAMUS',
-          name: 'cardiacSegmentationCAMUS',
-          component: () => import('@/views/ad/cardiacSegmentation/cardiacSegmentationCAMUS/index'),
-          meta: {title: '心脏分割（CAMUS）', icon: 'product-cate'}
-        },
-        {
-          path: 'echocardiofractionation',
-          name: 'echocardiofractionation',
-          component: () => import('@/views/ad/cardiacSegmentation/echocardiofractionation/index'),
-          meta: {title: '超声心动分割（视频）', icon: 'product-cate'}
-        }
-      ]
-    },
+          {
+            path: 'ultrasoundSemiSupervisedCS',
+            name: 'ultrasoundSemiSupervisedCS',
+            component: () => import('@/views/ad/cardiacSegmentation/ultrasoundSemiSupervisedCS/index'),
+            meta: {title: '半监督心脏分割（超声）', icon: 'product-add'},
+            // hidden: true
+          },
+          {
+            path: 'cardiacSegmentationCAMUS',
+            name: 'cardiacSegmentationCAMUS',
+            component: () => import('@/views/ad/cardiacSegmentation/cardiacSegmentationCAMUS/index'),
+            meta: {title: '心脏分割（CAMUS）', icon: 'product-cate'}
+          },
+          {
+            path: 'echocardiofractionation',
+            name: 'echocardiofractionation',
+            component: () => import('@/views/ad/cardiacSegmentation/echocardiofractionation/index'),
+            meta: {title: '超声心动分割（视频）', icon: 'product-cate'}
+          }
+        ]
+      },
       {
         path: '/ad/others',
         component: AppMain,
@@ -242,11 +291,32 @@ export const asyncRouterMap = [
             meta: {title: '臂丛神经分割和目标检测', icon: 'product-list'},
           },
           {
+            path: 'brachialPlexusSegTD/selectP',
+            name: 'selectP',
+            component: () => import('@/views/ad/others/brachialPlexusSegTD/selectP'),
+            meta: {title: '臂丛神经分割选择病人', icon: 'product-list'},
+            hidden: true
+          },
+          // {
+          //   path: 'brachialPlexusSegTD/patientsDataEntry',
+          //   name: 'patientsDataEntry',
+          //   component: () => import('@/views/ad/others/brachialPlexusSegTD/patientsDataEntry'),
+          //   meta: {title: '臂丛神经分割患者数据录入', icon: 'product-list'},
+          //   hidden: true
+          // },
+          {
+            path: 'brachialPlexusSegTD/selectData',
+            name: 'selectData',
+            component: () => import('@/views/ad/others/brachialPlexusSegTD/selectData'),
+            meta: {title: '臂丛神经分割选择数据', icon: 'product-list'},
+            hidden: true
+          },
+          {
             path: 'gastrointestinalId',
             name: 'gastrointestinalId',
             component: () => import('@/views/ad/others/gastrointestinalId/index'),
             meta: {title: '胃肠镜识别', icon: 'product-add'},
-            hidden: true
+            // hidden: true
           },
           {
             path: 'covidForecast',
@@ -258,7 +328,14 @@ export const asyncRouterMap = [
             path: 'modelCompression',
             name: 'modelCompression',
             component: () => import('@/views/ad/others/modelCompression/index'),
-            meta: {title: '模型压缩', icon: 'product-cate'}
+            meta: {title: '模型压缩', icon: 'product-cate'},
+          },
+          {
+            path: 'modelCompression/selectData',
+            name: 'modelCompression-selectData',
+            component: () => import('@/views/ad/others/modelCompression/selectData'),
+            meta: {title: '模型压缩选择数据', icon: 'product-list'},
+            hidden: true
           },
           {
             path: 'brainVolumeCalc',
@@ -339,7 +416,24 @@ export const asyncRouterMap = [
       }
     ]
   },
-  {path: '*', redirect: '/404', hidden: true}
+  {
+    path: '/common',
+    // redirect: '/common/selectPatient',
+    name:'common',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'selectPatient',
+        name: 'selectPatient',
+        component: () => import('@/views/common/selectPatient'),
+        meta: {title: '选择病人', icon: 'product-list'},
+        hidden: true
+      }
+    ]
+  },
+  {path: '*', redirect: '/404', hidden: true},
+
 ]
 
 export default new Router({

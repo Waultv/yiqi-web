@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>心音预处理</h1>
+    <h1>心音心电模态转换预处理</h1>
   </div>
 </template>
 

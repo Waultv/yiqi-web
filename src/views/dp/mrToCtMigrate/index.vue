@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>心音预处理</h1>
+    <h1>MR转CT域迁移</h1>
   </div>
 </template>
 

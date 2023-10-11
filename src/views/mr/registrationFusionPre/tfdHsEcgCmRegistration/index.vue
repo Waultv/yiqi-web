@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>时频心音心电</h1>
+    <h1>时频域心音心电的跨膜态配准</h1>
   </div>
 </template>
 

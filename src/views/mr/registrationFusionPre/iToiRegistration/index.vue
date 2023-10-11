@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>home</h1>
+    <h1>图像与图像的配准</h1>
   </div>
 </template>
 
