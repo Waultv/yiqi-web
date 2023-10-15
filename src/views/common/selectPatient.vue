@@ -1,44 +1,53 @@
 <template>
-  <div>
-    <SearchForm :searchForm="searchForm" :searchHandle="searchHandle" :searchData="searchData"/>
-    <el-table
-      :data="tableData"
-      :row-class-name="tableRowColor"
-      border
-      highlight-current-row
-      @current-change="handleSelectionChange"
-      style="width: 100%">
-      <!--      多选-->
-      <!--      <el-table-column-->
-      <!--        type="selection"-->
-      <!--        width="55">-->
-      <!--      </el-table-column>-->
-      <el-table-column v-for="item in columns" fixed :prop="item.prop" :key="item.prop" :label="item.label">
-      </el-table-column>
-      <el-table-column
-        fixed="right"
-        label="操作"
-        width="140">
-        <template slot-scope="scope">
-          <el-button @click="selectConfig(scope.row)" type="text" size="small">选择模型</el-button>
-          <el-button @click="uploadData(scope.row)" type="text" size="small">上传数据</el-button>
-        </template>
-      </el-table-column>
-    </el-table>
-    <el-button type="primary" class="btn-confirm" @click="confirm">确认选择</el-button>
+  <div class="container">
+    <div class="left-area">
+      <SearchForm :searchForm="searchForm" :searchHandle="searchHandle" :searchData="searchData"/>
+      <el-button class="btn-addPatient" type="primary" size="small">新建患者</el-button>
+      <el-table
+        :data="tableData"
+        :row-class-name="tableRowColor"
+        border
+        highlight-current-row
+        @current-change="handleSelectionChange"
+        style="width: 100%">
+        <!--      多选-->
+        <!--      <el-table-column-->
+        <!--        type="selection"-->
+        <!--        width="55">-->
+        <!--      </el-table-column>-->
+        <el-table-column v-for="item in columns" fixed :prop="item.prop" :key="item.prop" :label="item.label">
+        </el-table-column>
+        <el-table-column
+          fixed="right"
+          label="操作"
+          width="140">
+          <template slot-scope="scope">
+            <el-button @click="selectConfig(scope.row)" type="text" size="small">选择模型</el-button>
+            <el-button @click="uploadData(scope.row)" type="text" size="small">上传数据</el-button>
+          </template>
+        </el-table-column>
+      </el-table>
+      <el-button type="primary" class="btn-confirm" @click="confirm">确认选择</el-button>
+    </div>
+    <div class="right-area">
+      <div>当前算法：{{ configFormData.algorithmg }}
+        <el-button @click="selectConfig" type="primary" icon="el-icon-edit" size="small">编辑</el-button>
+      </div>
+      <div>当前模型：{{ configFormData.model }}</div>
+    </div>
     <!--    选择配置弹窗-->
     <el-dialog title="选择配置" :visible.sync="configDialogVisible">
       <el-form :model="configFormData">
         <el-form-item label="当前算法">
           <el-select v-model="configFormData.algorithmg" placeholder="请选择算法">
-            <el-option label="算法一" value="shanghai"></el-option>
-            <el-option label="算法二" value="beijing"></el-option>
+            <el-option label="算法一" value="算法一"></el-option>
+            <el-option label="算法二" value="算法二"></el-option>
           </el-select>
         </el-form-item>
         <el-form-item label="当前模型">
           <el-select v-model="configFormData.model" placeholder="请选择模型">
-            <el-option label="模型一" value="shanghai"></el-option>
-            <el-option label="模型二" value="beijing"></el-option>
+            <el-option label="模型一" value="模型一"></el-option>
+            <el-option label="模型二" value="模型二"></el-option>
           </el-select>
         </el-form-item>
       </el-form>
@@ -117,8 +126,8 @@ export default {
       configDialogVisible: false,
       updateDialogVisible: false,
       configFormData: {
-        algorithmg: '',
-        model: ''
+        algorithmg: '算法一',
+        model: '模型一'
 
       }
     }
@@ -135,7 +144,6 @@ export default {
     },
     // 选择配置
     selectConfig(row) {
-      this.row = row
       this.configDialogVisible = true
     },
     // 上传数据
@@ -172,6 +180,30 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.left-area {
+  height: 100%;
+  width: 80%;
+  position: relative;
+}
+
+.right-area {
+  height: 100%;
+  width: 20%;
+  padding: 20px;
+}
+
+.btn-addPatient {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
 .btn-confirm {
   position: absolute;
   bottom: 50px;
