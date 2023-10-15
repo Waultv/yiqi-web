@@ -150,20 +150,20 @@ export const asyncRouterMap = [
             component: () => import('@/views/mr/registrationFusionPre/iToiRegistration/index'),
             meta: {title: '图像与图像的配准', icon: 'product-list'},
           },
-          {
-            path: 'iToiFusion',
-            name: 'iToiFusion',
-            component: () => import('@/views/mr/registrationFusionPre/iToiFusion/index'),
-            meta: {title: '图像与图像的融合', icon: 'product-add'},
-            // hidden: true
-          },
-          {
-            path: 'iToiFusion/selectP',
-            name: 'selectP',
-            component: () => import('@/views/mr/registrationFusionPre/iToiFusion/selectP'),
-            meta: {title: '图像融合选择病人', icon: 'product-list'},
-            hidden: true
-          },
+          // {
+          //   path: 'iToiFusion',
+          //   name: 'iToiFusion',
+          //   component: () => import('@/views/mr/registrationFusionPre/iToiFusion/index'),
+          //   meta: {title: '图像与图像的融合', icon: 'product-add'},
+          //   // hidden: true
+          // },
+          // {
+          //   path: 'iToiFusion/selectP',
+          //   name: 'selectP',
+          //   component: () => import('@/views/mr/registrationFusionPre/iToiFusion/selectP'),
+          //   meta: {title: '图像融合选择病人', icon: 'product-list'},
+          //   hidden: true
+          // },
           // {
           //   path: 'iToiFusion/patientsDataEntry',
           //   name: 'patientsDataEntry',
@@ -171,13 +171,13 @@ export const asyncRouterMap = [
           //   meta: {title: '图像融合患者数据录入', icon: 'product-list'},
           //   hidden: true
           // },
-          {
-            path: 'iToiFusion/selectData',
-            name: 'selectData',
-            component: () => import('@/views/mr/registrationFusionPre/iToiFusion/selectData'),
-            meta: {title: '图像融合选择数据', icon: 'product-list'},
-            hidden: true
-          },
+          // {
+          //   path: 'iToiFusion/selectData',
+          //   name: 'selectData',
+          //   component: () => import('@/views/mr/registrationFusionPre/iToiFusion/selectData'),
+          //   meta: {title: '图像融合选择数据', icon: 'product-list'},
+          //   hidden: true
+          // },
           {
             path: 'tfdHsEcgCmRegistration',
             name: 'tfdHsEcgCmRegistration',
